@@ -1,0 +1,23 @@
+{
+  "name": "threejsplay",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "wassFCP <awassell@fcptech.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "play"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}
