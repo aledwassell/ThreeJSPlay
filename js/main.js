@@ -1,14 +1,5 @@
 var scene, camera, renderer , controls, editControls;
 
-var multiplyScalar = function( scalar ) {
-
-    this.x *= scalar;
-    this.y *= scalar;
-
-    return this;
-
-}
-
 function init () {
     var parentDiv = document.getElementById('container')
     scene = new THREE.Scene();
@@ -24,13 +15,13 @@ function init () {
     camera.position.set(0,6,0);
     scene.add(camera);
 
-    window.addEventListener('resize', function () {
+    setInterval(function () {
         var WIDTH = window.innerWidth;
         var HEIGHT = window.innerHeight;
         renderer.setSize(WIDTH, HEIGHT);
         camera.aspect = WIDTH / HEIGHT;
         camera.updateProjectionMatrix();
-    });
+    }, 300);
 
     renderer.setClearColor(0x333F47, 1);
 
@@ -38,20 +29,13 @@ function init () {
     light.position.set(-100,200,100);
     scene.add(light);
 
-    var loader = new THREE.JSONLoader();
-    loader.load('js/vendor/threejs_logo_example/models/treehouse_logo.js', function (geometry) {
-        var material = new THREE.MeshLambertMaterial({color: 0x55B663});
-        mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-    })
+    var geometry = new THREE.BoxGeometry(1,1,1);
+    var material = new THREE.MeshLambertMaterial({color: 0x55B663});
+    var cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.enableZoom = true;
-
-    console.log(camera)
-
-    console.log(controls)
-    console.log(controls.dIn)
 }
 
 function animate () {

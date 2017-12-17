@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <link rel="stylesheet" href="js/components/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="js/components/tachyons/css/tachyons.min.css">
 
     </head>
     <body>
@@ -23,18 +24,20 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.
-            Orbit Controls:<i aria-hidden="true" id="zoomOut" class="fa fa-search-minus"></i> <i aria-hidden="true" id="zoomIn" class="fa fa-search-plus"></i>
-        </p>
+        
 
-        <div id="container" style="height: 80%; width: 80%;">
-
+        <div id="container" style="height: 80%; width: 80%; position: relative;">
+            <div style="position: absolute;" class="white helvetica f3 pa2">
+                <p>Hello world! This is HTML5 Boilerplate.
+                    Orbit Controls:<i aria-hidden="true" id="zoomOut" class="fa fa-search-minus"></i> <i aria-hidden="true" id="zoomIn" class="fa fa-search-plus"></i>
+                </p>
+            </div>
         </div>
 
 
-        <script type="text/javascript" src="js/components/three.js-master/build/three.js"></script>
-        <script type="text/javascript" src="js/components/three.js-master/examples/js/controls/OrbitControls.js"></script>
-        <script type="text/javascript" src="js/components/three.js-master/examples/js/controls/EditorControls.js"></script>
+        <script type="text/javascript" src="js/components/three.js/build/three.js"></script>
+        <script type="text/javascript" src="js/components/three.js/examples/js/controls/OrbitControls.js"></script>
+        <script type="text/javascript" src="js/components/three.js/examples/js/controls/EditorControls.js"></script>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
